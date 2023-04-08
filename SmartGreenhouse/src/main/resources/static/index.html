@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Cambria', sans-serif;
+    }
+
+    html, body {
+        display: grid;
+        height: 100vh;
+        place-items: center;
+        background: #1f2833;
+    }
+
+    .main_div {
+        width: 365px;
+        background: #c5c6c7;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .main_div .title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .main_div .title2 {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .main_div .social_icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        margin-top: 25px;
+    }
+
+    form .input_box {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .input_box input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding-left: 45px;
+        font-size: 17px;
+        transition: all 0.3s ease;
+    }
+
+    .input_box input:focus {
+        border-color: #45a29e;
+    }
+
+    .input_box .icon {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: #1f2833;
+    }
+
+    form .option_div {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .option_div .check_box {
+        display: flex;
+        align-items: center;
+    }
+
+    .option_div span {
+        margin-left: 5px;
+        font-size: 16px;
+        color: #0b0c10;
+    }
+
+    .option_div .forget_div a {
+        font-size: 16px;
+        color: #45a29e;
+    }
+
+    .button input {
+        padding-left: 0;
+        background: #45a29e;
+        color: #0b0c10;
+        border: none;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+    .button input:hover {
+        background: #66fcf1;
+    }
+
+    form .sign_up {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .sign_up a {
+        color: #45a29e;
+    }
+
+    form a {
+        text-decoration: none;
+    }
+
+    form a:hover {
+        text-decoration: underline;
+    }
+
+
+</style>
+<body>
+<div class="main_div">
+    <div class="title">Welcome!</div>
+    <div class="title2">Enter the following in order to add a entry</div>
+
+    <form method="post" name="entryDto" action="http://localhost:8080/addEntry">
+        <div class="input_box">
+            <input name="temperature" type="text" placeholder="Temperature" required>
+            <div class="icon"><i class="fas fa-temperature-high"></i></div>
+        </div>
+        <div class="input_box">
+            <input name="moisture" type="text" placeholder="Moisture" required>
+            <div class="icon"><i class="fas fa-water"></i></div>
+        </div>
+        <div class="input_box button">
+            <input type="submit" value="Create entry">
+        </div>
+    </form>
+    <form method="get" action="http://localhost:8080/mostRecent">
+        <div class="input_box button">
+            <input type="submit" value="Get most recent Entry">
+        </div>
+    </form>
+    <form method="get" action="http://localhost:8080/all">
+        <div class="input_box button">
+            <input type="submit" value="Get all Entries">
+        </div>
+    </form>
+</div>
+
+</body>
+
+</html>

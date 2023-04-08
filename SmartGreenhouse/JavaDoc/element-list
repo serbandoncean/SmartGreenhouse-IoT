@@ -1,0 +1,7 @@
+com.example.smartgreenhouse
+com.example.smartgreenhouse.controllers
+com.example.smartgreenhouse.dtoresponses
+com.example.smartgreenhouse.models
+com.example.smartgreenhouse.repositories
+com.example.smartgreenhouse.services
+com.example.smartgreenhouse.util
